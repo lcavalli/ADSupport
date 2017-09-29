@@ -14,14 +14,16 @@ has a different version from the one required by areaDetector.
 This module contains the following libraries:
 
 - [GraphicsMagick] (http://www.graphicsmagick.org/)
-- [HDF5]   (https://support.hdfgroup.org/HDF5/)
-- [JPEG]   (http://www.ijg.org/)
-- [netCDF] (http://www.unidata.ucar.edu/software/netcdf/)  
-- [NeXus]  (http://www.nexusformat.org/)
-- [SZIP]   (https://support.hdfgroup.org/doc_resource/SZIP/)
-- [TIFF]   (http://simplesystems.org/libtiff/)
-- [XML2]   (http://www.xmlsoft.org/index.html)
-- [ZLIB]   (http://www.zlib.net/)
+- [HDF5]    (https://support.hdfgroup.org/HDF5/)
+- [JPEG]    (http://www.ijg.org/)
+- [netCDF]  (http://www.unidata.ucar.edu/software/netcdf/)
+- [NeXus]   (http://www.nexusformat.org/)
+- [SZIP]    (https://support.hdfgroup.org/doc_resource/SZIP/)
+- [TIFF]    (http://simplesystems.org/libtiff/)
+- [XML2]    (http://www.xmlsoft.org/index.html)
+- [ZLIB]    (http://www.zlib.net/)
+- [CFITSIO] (https://heasarc.gsfc.nasa.gov/fitsio/fitsio.html)
+- [CCFITS]  (https://heasarc.gsfc.nasa.gov/fitsio/ccfits/)
 
 These libraries have had minor changes made so they will build with the EPICS
 build system on all of the supported platforms.  These changes are documented
