@@ -1,7 +1,7 @@
 This directory contains the CFITSIO code (3.420).
 It has been slightly modified to build under the EPICS build system.
 
-No source files needed to be modified.
+Patched fitsio.h to avoid READONLY redefinition.
 
 Makefile  
   This is completely new.

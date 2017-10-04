@@ -270,6 +270,9 @@ SERVICES PROVIDED HEREUNDER."
 #define BINARY_TBL 2  /* Binary table HDU */
 #define ANY_HDU   -1  /* matches any HDU type */
 
+#ifdef READONLY
+#undef READONLY
+#endif
 #define READONLY  0    /* options when opening a file */
 #define READWRITE 1
 
