@@ -16,6 +16,8 @@ ifeq ($(WITH_CFITSIO),YES)
     USR_CFLAGS += -D_LARGEFILE_SOURCE=1
     USR_CFLAGS += -D_FILE_OFFSET_BITS=64
 
+    CFITSIO = $(TOP)/supportApp/cfitsioSrc
+
     LIBRARY = cfitsio
     ifeq ($(SHARED_LIBRARIES),YES)
       USR_CFLAGS += -DPIC -DNOLIBTOOL
@@ -92,19 +94,24 @@ ifeq ($(WITH_CFITSIO),YES)
     cfitsio_SRCS += wcssub.c
     cfitsio_SRCS += wcsutil.c
 
-    ifeq ($(ZLIB_EXTERNAL),YES)
-      ifdef ZLIB_INCLUDE
-        USR_INCLUDES += $(ZLIB_INCLUDE)
-      endif
-      ifdef ZLIB_LIB
-        z_DIR        = $(ZLIB_LIB)
-        LIB_LIBS     += z
-      else
-        LIB_SYS_LIBS += z
-      endif
-    else
-      LIB_LIBS += zlib
-    endif
+    SRC_DIRS += $(CFITSIO)/zlib
+
+    INC += zlib.h
+    INC += zconf.h
+
+    cfitsio_SRCS += adler32.c
+    cfitsio_SRCS += crc32.c
+    cfitsio_SRCS += deflate.c
+    cfitsio_SRCS += infback.c
+    cfitsio_SRCS += inffast.c
+    cfitsio_SRCS += inflate.c
+    cfitsio_SRCS += inftrees.c
+    cfitsio_SRCS += trees.c
+    cfitsio_SRCS += uncompr.c
+    cfitsio_SRCS += zcompress.c
+    cfitsio_SRCS += zuncompress.c
+    cfitsio_SRCS += zutil.c
+
 
   endif # ($(CFITSIO_EXTERNAL),NO)
 endif # ($(WITH_CFITSIO),YES)
