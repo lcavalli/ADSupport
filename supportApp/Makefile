@@ -32,8 +32,5 @@ GraphicsMagickSrc_DEPEND_DIRS += tiffSrc zlibSrc xml2Src jpegSrc
 
 DIRS += cfitsioSrc
 
-DIRS += CCfitsSrc
-CCfitsSrc_DEPEND_DIRS += cfitsioSrc
-
 include $(TOP)/configure/RULES_DIRS
 
